@@ -100,7 +100,7 @@ exports.update = function (req, callback) {
 exports.create = function (req, callback) {
     let body = req.body;
     let query = 'insert into `blogs`\n' +
-        '(cate_id, title, delta, content, abstract, tags, created_at, updated_at, user_id, thumb_img)\n' +
+        '(cate_id, title,  content, abstract, tags, created_at, updated_at, user_id, thumb_img)\n' +
         'values\n' +
         '(?,?,?,?,?,?,?,?,?)';
     conn.query(query, [

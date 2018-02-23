@@ -5,21 +5,9 @@ let connection = mysql.createConnection({
     port:'3306',
     user : 'root',
     password : 'blank1987',
-    database : 'qcblog'
+    database : 'qc'
 });
 
 connection.connect();
-
-// connection.squery = function (querystring, params = null) {
-//     return new Promise(function(resolve,reject){
-//         connection.query(querystring, params, function(err, rows, fields) {
-//             if (err) {
-//                 reject(err);
-//             } else {
-//                 resolve(rows);
-//             }
-//         });
-//     });
-// };
 
 module.exports = connection;
