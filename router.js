@@ -25,9 +25,7 @@ module.exports = (app) => {
     app.post('/blog/create', multer().none(), res(blog.create));
     app.post('/blog/delete', multer().none(), res(blog.delete));
 
-    app.get('/upload_token', (req,res)=>{
-        res.send(uploadToken());
-    });
+    app.post('/upload_token', multer().none(), res(uploadToken));
 
     app.get('/cates', res(cate.all));
     app.get('/cate/:id', res(cate.get));
