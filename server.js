@@ -10,7 +10,7 @@ let server = app.listen(3000, function () {
 });
 
 app.all('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://192.168.1.25:8725");
+    res.header("Access-Control-Allow-Origin", "http://192.168.1.25:8800");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.header("Access-Control-Allow-Headers", "If-Modified-Since");
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
